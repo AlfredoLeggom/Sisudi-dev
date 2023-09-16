@@ -1,0 +1,34 @@
+//Importar bloques
+@use '../blocks/block-menu.scss' as menu;
+@use '../blocks/block-form.scss' as form;
+@use '../blocks/block-footer.scss' as footer;
+
+//Importación de cnfiguraciones
+@use '../config/config.scss' as config;
+
+//Importar fuentes
+@use '../fonts/Montserrat.scss';
+@use '../fonts/Oswald.scss';
+@use '../fonts/WebSymbols.scss';
+
+//Importar estilos de menu
+@include menu.block-menu;
+
+//Importar estilos de form
+@include form.block-form;
+
+//Importar estilos de footer
+@include footer.block-footer;
+
+//Inicio de estilos generales
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+//Fin de estilos generales
+
+//Estilos particulares
+.contact {
+    padding: 60px 0 !important;
+}

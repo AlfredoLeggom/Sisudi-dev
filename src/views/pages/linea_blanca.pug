@@ -1,0 +1,34 @@
+extends ../templates/template
+
+block config
+    -actual_page = "linea_blanca"
+
+    //-Importación de bloques
+    include ../blocks/block-menu
+    include ../blocks/block-product-lineaBlanca
+    include ../blocks/block-footer
+    //-Importar configuraciones extras
+    include ../config/config-product
+    include ../config/json/json-lineaBlanca
+
+block append description 
+    meta(name="description" content="Electrodomésticos de la mejor calidad, las mejores marcas")
+
+block header
+    //Inicio de menu
+    +block-menu(Categories, SubCategories, CategoriesIcon, url_mainLogo)
+    //Fin de menu
+    
+block container
+    //Inicio de bloque de linea-blanca 
+    +block-product-lineaBlanca(lineaBlancaProductData, lineaBlancaDataPage)
+    //Fin de bloque de linea-blanca
+
+block footer
+    //Inicio de Footer
+    +block-footer(title_page, categorias, subCategorias, nameCategorias, nameSubCategorias)
+    //Fin de Footer
+
+append scripts
+    //-Script del menu dinamico para seleccionar productos
+    script(src="../script/menu-product.js" type="text/javascript") 

@@ -1,0 +1,29 @@
+mixin block-form (direction, phone, time, mail, facebook )
+    section.contact
+        h2.contact__title Contacto
+            hr.contact__hr
+        form(action="#" onsubmit="return false" method="post").contact__form
+            input(type="text" placeholder="Nombre" name="Nombre") 
+            input(type="tel" placeholder="Teléfono" name="Telefono") 
+            input(type="mail" placeholder="Dirección de correo electrónico" name="Telefono")
+            button Enviar
+        div.contact__info
+            div.data 
+                p.data__direction= direction
+                p
+                    i.fas.fa-phone
+                    span.data__phone= phone 
+                p
+                    i.fab.fa-whatsapp
+                    span= whatsapp  
+                p.data__mail
+                    span.webSymbols @
+                    span.data__mail= mail 
+                p
+                    span.webSymbols P
+                    span.data__time= time
+                p
+                    a(href= facebook): span.webSymbols f 
+
+            iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7527.157936391002!2d-99.131121!3d19.387375!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fef62fa2d3dd%3A0xe135ecf6fceb5852!2sPlaya%20Guitarr%C3%B3n%20312%2C%20Reforma%20Iztaccihuatl%20Nte.%2C%20Iztacalco%2C%2008810%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX%2C%20M%C3%A9xico!5e0!3m2!1ses!2sus!4v1614748454942!5m2!1ses!2sus" allowfullscreen="" loading="lazy").googlemap
+                

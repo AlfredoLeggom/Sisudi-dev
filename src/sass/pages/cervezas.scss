@@ -1,0 +1,194 @@
+//Importar bloques
+@use '../blocks/block-menu.scss' as menu;
+@use '../blocks/block-product.scss' as product;
+@use '../blocks/block-footer.scss' as footer;
+
+//Importar configuraciones
+@use '../config/config.scss' as config;
+
+//Importar fuentes
+@use '../fonts/Montserrat.scss';
+@use '../fonts/Oswald.scss';
+@use '../fonts/WebSymbols.scss';
+
+//Importar estilos de menu
+@include menu.block-menu;
+
+//Importar estilos de product
+@include product.block-product;
+
+//Importar estilos de footer
+@include footer.block-footer;
+
+//Inicio de estilos generales
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.wrap-product {
+    .product__data{
+        span{
+            margin-top: 5px;
+            a{
+                font-weight: 700;
+            }
+        }
+    }
+    .product__container {
+        width: 90%;
+        justify-content: space-evenly;
+
+        .product-box {
+            flex-basis: 30%;
+        }
+    }
+}
+//Fin de estilos generales
+
+//Inicio de estilos particulares
+.wrap-product .product__container {
+    .product-box--img {
+        background-color: white;
+        flex-basis: 50%;
+        align-items: flex-start;
+        flex-grow: 0;
+        max-height: 300px;
+    }
+
+    .product-box--data {
+        flex-basis: 50%;
+        flex-grow: 1;
+    }
+}
+//Fin de estilos particulares
+
+//Inicio de Responsive
+@media (max-width: 1100px) {
+    .wrap-product .product__container {
+        width: 90%;
+    }
+    .wrap-product .product__data {
+        width: 85%;
+    }
+}
+
+@media (max-width: 667px) {
+    .wrap-product .product__data h2 {
+        margin: 10px 0px 0px 0px;
+    }
+    .wrap-product .product__data h3 {
+        margin-top: 25px;
+        font-size: 26px;
+    }
+    .wrap-product .product__container {
+        margin: 20px auto 0px auto;
+        justify-content: center;
+
+        .product-box {
+            flex-basis: 60%;
+        }
+    }
+    .wrap-product .product__container .product-box--img {
+        max-height: 175px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .wrap-product .product__data h2 {
+        margin: 0px;
+        padding-top: 20px;
+    }
+
+    .wrap-product .product__container {
+        margin: 10px auto 0px auto;
+    }
+}
+
+@media (max-width: 450px) {
+    .wrap-product .product__container .product-box {
+        flex-basis: 75%;
+    }
+}
+
+@media (max-width: 350px) {
+    .wrap-product .product__data h2 {
+        font-size: 45px;
+    }
+    .wrap-product .product__container .product-box {
+        flex-basis: 90%;
+    }
+}
+
+@media (max-width: 300px) {
+    .wrap-product .product__data {
+        h2 {
+            font-size: 43px;
+        }
+        h3 {
+            margin-top: 15px;
+            font-size: 26px;
+        }
+        span {
+            font-size: 14px;
+        }
+    }
+    .wrap-product .product__container {
+        margin-top: 5px;
+    }
+    .wrap-product .product__container .product-box--data span {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 230px) {
+    .wrap-product .product__data h2 {
+        font-size: 35px;
+    }
+    .wrap-product .product__data span {
+        font-size: 13px;
+    }
+    .wrap-product .product__container {
+        margin: 0px;
+        margin-top: 5px;
+        width: 100%;
+    }
+    .wrap-product .product__container .product-box {
+        flex-basis: 85%;
+        margin: 7px 0px;
+    }
+    .wrap-product .product__container .product-box--data span {
+        font-size: 14px;
+    }
+    .wrap-product .product__container .product-box--data span {
+        padding: 10px 12px;
+    }
+    .wrap-product .product__container .product-box--data span {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 180px) {
+    .wrap-product .product__data h2 {
+        font-size: 30px;
+    }
+    .wrap-product .product__data h3 {
+        margin-top: 7px;
+    }
+}
+
+@media (max-width: 160px) {
+    .wrap-product .product__data h2 {
+        font-size: 25px;
+        padding-top: 10px;
+    }
+    .wrap-product .product__data hr {
+        margin: 8px auto 0px auto;
+    }
+    .wrap-product .product__data span {
+        text-align: center;
+    }
+}
+//Fin de Responsive

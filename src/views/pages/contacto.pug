@@ -1,0 +1,31 @@
+extends ../templates/template
+
+block config
+
+    -actual_page = 'contacto'
+
+    //-Importar bloques
+    include ../blocks/block-menu
+    include ../blocks/block-form
+    include ../blocks/block-footer
+
+    //-Configuraciones extras
+    include ../config/config-data
+
+block append description 
+    meta(name="description" content="comunícate con nosotros al telefono 55 8804 5455")
+
+block header
+    //Inicio de menu
+    +block-menu(Categories, SubCategories, CategoriesIcon, url_mainLogo)
+    //Fin de menu
+
+block container
+    //Inicio de formulario
+    +block-form(direction, phone, time, mail, facebook)
+    //Fin de formulario
+
+block footer
+    //Inicio de Footer
+    +block-footer(title_page, categorias, subCategorias, nameCategorias, nameSubCategorias)
+    //Fin de Footer

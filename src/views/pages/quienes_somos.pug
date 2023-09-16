@@ -1,0 +1,33 @@
+extends ../templates/template
+
+block config 
+    -actual_page = 'quienes_somos'
+
+    //-Importacion de configuraciones extras
+    include ../config/config-data
+
+    //-Importación de bloques
+    include ../blocks/block-menu
+    include ../blocks/block-about-us
+    include ../blocks/block-footer
+
+block append description 
+    meta(name="description" content="Tenemos como principal objetivo satisfacer las necesidades de nuestros clientes, brindando un servicio completo en prospección, visita, cotización e implementación del servicio más óptimo según el requerimiento de cada uno de nuestros clientes.")
+
+block header
+
+    //Inicio de menu
+    +block-menu(Categories, SubCategories, CategoriesIcon, url_mainLogo)
+    //Fin de menu
+
+block container 
+
+    //Inicio de sobre nosotros
+    +block-about-us()
+    //Fin de sobre nosotros
+
+block footer 
+
+    //Inicio de footer
+    +block-footer(title_page, categorias, subCategorias, nameCategorias, nameSubCategorias)
+    //Fin de footer

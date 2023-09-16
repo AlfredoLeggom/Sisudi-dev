@@ -1,0 +1,32 @@
+mixin block-product-moda (productData, pageData)
+    section.wrap-product 
+        div.product__data
+            each title in pageData
+                h2!= title .title 
+                hr
+                h3!= title.subtitle
+                span
+                    p!= title.descripcion
+                    p!= title.comunicate
+        div.product__menu
+            div(category='all' class='category-menu'): p Todos
+            each data in productData
+                div(category=data.value  class='category-menu'): p= data.categoria
+        div.wrap-list
+            each data in productData
+                div(category=data.value).product__section-title.product__data
+                    h2= data.categoria
+                    hr
+                div(category=data.value).product__container
+                    each product in data.productos
+                        div.product-box(category=data.value)
+                            div.product-box--img
+                                img(src= product.linkImg)
+                            div.product-box--data
+                                span
+                                    p
+                                        strong Modelo : 
+                                        = product.modelo 
+                                    p
+                                        strong Precio : 
+                                        = '$' + product.precio + ' MXN'

@@ -1,0 +1,35 @@
+extends ../templates/template
+
+block config
+    - actual_page = 'servicios'
+
+    //-Importación de bloques
+    include ../blocks/block-menu
+    include ../blocks/block-service
+    include ../blocks/block-footer
+
+    //-Configuraciones extras
+    include ../config/config-service
+    include ../config/config-data
+
+block append description 
+    meta(name="description" content="Recursos Humanos, Asesoría Jurídica, Servicio Contable, Desarrollo Web")
+
+block header
+    //Inicio de menu
+    +block-menu(Categories, SubCategories, CategoriesIcon, url_mainLogo)
+    //Fin de menu
+
+block container
+    //Inicio de servicios
+    +block-service(dataService)
+    //Fin de servicios
+
+
+block footer
+    //Inicio de footer
+    +block-footer(title_page, categorias, subCategorias, nameCategorias, nameSubCategorias)
+    //Fin de footer
+
+
+     

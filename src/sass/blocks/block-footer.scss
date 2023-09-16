@@ -1,0 +1,182 @@
+//Importar configuración
+@use '../config/config.scss' as config;
+
+//Importar Fuentes
+@use '../fonts/Montserrat';
+@use '../fonts/Oswald.scss';
+@use '../fonts/WebSymbols.scss';
+
+@mixin block-footer {
+    .footer {
+        height: 210px;
+        background-color: #2c2d34;
+        padding: 30px 70px;
+        font-family: config.$menu-font;
+
+        &__copyright {
+            float: left;
+            width: 30%;
+            margin-top: 35px;
+
+            div {
+                color: white;
+                line-height: 40px;
+
+                :first-child {
+                    font-weight: bold;
+                    font-size: 24px;
+                }
+
+                :last-child {
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &__menu {
+            float: right;
+            width: 50%;
+
+            // Menu
+            .footer-menu {
+                display: flex;
+                flex-flow: row wrap;
+                flex-basis: 0px;
+                flex-grow: 1;
+                justify-content: space-between;
+
+                &__category {
+                    list-style: none;
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        font-size: 17px;
+
+                    }
+                }
+            }
+
+            //Submenu
+            .footer-menu__category--submenu{
+                position: relative;
+
+                > a{
+                    display: block;
+                    margin-bottom: 10px;
+                }
+
+                .footer-submenu{
+                    display: flex;
+                    opacity: 0;
+                    flex-flow: column wrap;
+                    height: 140px;
+                    list-style: none;
+
+                    transition: all 400ms;
+
+                    &__category{
+                        flex-basis: 0px;
+                        flex-grow: 1;
+                        justify-content: center;
+                        border: 0.5px solid rgba(218, 217, 217, 0.5);
+                        
+                        a{
+                            display: block;
+                            height: 100%;
+                            width: 100%;
+                            line-height: 40px;
+                            text-align: center;
+                            font-size: 14px;
+                        }
+                    }
+
+                    :nth-child(2), :nth-child(3){
+                        border-top: none;
+                    }
+                }
+            }
+        }
+    }
+
+    //Efectos de hover
+    .footer-menu__category a:hover{
+        color: config.$Principal-color__orange;
+    }
+
+    .footer-menu__category--submenu:hover .footer-submenu{
+        opacity: 1;
+    }
+
+    //Inicio de responsive
+    @media (max-width: 1100px){
+        .footer__copyright {
+            width: 40%;
+        }
+    }
+
+    @media (max-width: 1050px){
+        .footer__copyright {
+            width: 40%;
+        }
+        .footer {
+            padding: 30px 50px;
+        }
+    }
+
+    @media (max-width: 950px){
+        .footer__menu {
+            float: right;
+            width: 60%;
+        }
+        .footer {
+            padding: 30px 40px;
+        }
+    }
+
+    @media (max-width: 850px){
+        .footer__menu{
+            display: none;
+        }
+        .footer__copyright {
+            margin-top: 0px;
+            width: 100%;
+        }
+        .footer {
+            height: 150px;
+        }
+    }
+
+    @media (max-width: 390px){
+        .footer {
+            padding: 20px 20px;
+        }
+        .footer__copyright div p{
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 250px){
+        .footer__copyright div :first-child{
+            font-size: 20px;
+        }
+        .footer__copyright div :last-child{
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 200px) {
+        .footer{
+            height: auto;
+        }
+        .footer__copyright{
+            float: none;
+        }
+        .footer__copyright div :last-child{
+            line-height: 25px;
+            margin-top: 5px;
+        }
+    }
+    //Fin de responsive
+}

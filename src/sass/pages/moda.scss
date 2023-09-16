@@ -1,0 +1,113 @@
+//Importar bloques
+@use '../blocks/block-menu.scss' as menu;
+@use '../blocks/block-product.scss' as product;
+@use '../blocks/block-footer.scss' as footer;
+
+//Importar configuraciones
+@use '../config/config.scss' as config;
+
+//Importar fuentes
+@use '../fonts/Montserrat.scss';
+@use '../fonts/Oswald.scss';
+@use '../fonts/WebSymbols.scss';
+
+//Importar estilos de menu
+@include menu.block-menu;
+
+//Importar estilos de product
+@include product.block-product;
+
+//Importar estilos de footer
+@include footer.block-footer;
+
+//Inicio de estilos generales
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+//Fin de estilos generales
+
+//Inicio de estilos particulares
+.wrap-product .product__container .product-box--img img{
+    max-height: 100%;
+}
+//Fin de estilos particulares
+
+//Inicio de responsive
+@media (max-width: 1160px){
+    .wrap-product .product__data{
+        width: 85%;
+
+        span{
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 950px){
+    .wrap-product .product__container .product-box{
+        flex-basis: 26%;
+    }
+    .wrap-product .product__container{
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 770px){
+    .wrap-product .product__data h2{
+        font-size: 43px;
+    }
+    .wrap-product .product__container .product-box{
+        flex-basis: 40%;
+    }
+    .wrap-product .product__data h3 {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 600px){
+
+    .wrap-product .product__container{
+        width: 100%;
+    }
+    .wrap-product .product__data h3 {
+        text-align: center;
+    }
+    .wrap-product .product__data span{
+        margin-top: 10px;
+        display: block;
+    }
+}
+
+@media (max-width: 450px){
+    .wrap-product .product__container .product-box {
+        flex-basis: 60%;
+    }
+    .wrap-product .product__data h2 {
+        font-size: 38px;
+    }
+    .wrap-product .product__data h3 {
+        font-size: 20px;
+    }
+    .wrap-product .product__data span {
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 300px){
+    .wrap-product .product__container .product-box {
+        flex-basis: 75%;
+    }
+    .wrap-product .product__data h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 200px){
+    .wrap-product .product__container .product-box--data span{
+        font-size: 14px;
+    }
+}
+//Fin de responsive

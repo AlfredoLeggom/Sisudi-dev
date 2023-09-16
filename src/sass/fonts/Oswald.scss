@@ -1,0 +1,82 @@
+// Extra-Light - 200
+@font-face{
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 200;
+    src: url('../assets/fonts/oswald/woff2/Oswald-ExtraLight.woff2') format('woff2'), //Super Mordern Browsers
+    url('../assets/fonts/oswald/woff/Oswald-ExtraLight.woff') format('woff'), // Modern Browsers
+    url('../assets/fonts/oswald/eot/Oswald-ExtraLight.eot'), //IE 9
+    url('../assets/fonts/oswald/eot/Oswald-ExtraLight.eot?#iefix') format('embedded-opentype'), //IE 6-8
+    url('../assets/fonts/oswald/ttf/Oswald-ExtraLight.ttf') format('truetype'), // Safari, Android, iOS
+    url('../assets/fonts/oswald/woff2/Oswald-ExtraLight.svg#Oswald') format('svg'); // Legacy iOS
+}
+
+
+// Light - 300
+@font-face{
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../assets/fonts/oswald/woff2/Oswald-Light.woff2') format('woff2'), //Super Mordern Browsers
+    url('../assets/fonts/oswald/woff/Oswald-Light.woff') format('woff'), // Modern Browsers
+    url('../assets/fonts/oswald/eot/Oswald-Light.eot'), //IE 9
+    url('../assets/fonts/oswald/eot/Oswald-Light.eot?#iefix') format('embedded-opentype'), //IE 6-8
+    url('../assets/fonts/oswald/ttf/Oswald-Light.ttf') format('truetype'), // Safari, Android, iOS
+    url('../assets/fonts/oswald/woff2/Oswald-Light.svg#Oswald') format('svg'); // Legacy iOS
+}
+
+
+// Regular - 400
+@font-face{
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/oswald/woff2/Oswald-Regular.woff2') format('woff2'), //Super Mordern Browsers
+    url('../assets/fonts/oswald/woff/Oswald-Regular.woff') format('woff'), // Modern Browsers
+    url('../assets/fonts/oswald/eot/Oswald-Regular.eot'), //IE 9
+    url('../assets/fonts/oswald/eot/Oswald-Regular.eot?#iefix') format('embedded-opentype'), //IE 6-8
+    url('../assets/fonts/oswald/ttf/Oswald-Regular.ttf') format('truetype'), // Safari, Android, iOS
+    url('../assets/fonts/oswald/woff2/Oswald-Regular.svg#Oswald') format('svg'); // Legacy iOS
+}
+
+
+// Medium - 500
+@font-face{
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../assets/fonts/oswald/woff2/Oswald-Medium.woff2') format('woff2'), //Super Mordern Browsers
+    url('../assets/fonts/oswald/woff/Oswald-Medium.woff') format('woff'), // Modern Browsers
+    url('../assets/fonts/oswald/eot/Oswald-Medium.eot'), //IE 9
+    url('../assets/fonts/oswald/eot/Oswald-Medium.eot?#iefix') format('embedded-opentype'), //IE 6-8
+    url('../assets/fonts/oswald/ttf/Oswald-Medium.ttf') format('truetype'), // Safari, Android, iOS
+    url('../assets/fonts/oswald/woff2/Oswald-Medium.svg#Oswald') format('svg'); // Legacy iOS
+}
+
+
+// SemiBold - 600
+@font-face{
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../assets/fonts/oswald/woff2/Oswald-SemiBold.woff2') format('woff2'), //Super Mordern Browsers
+    url('../assets/fonts/oswald/woff/Oswald-SemiBold.woff') format('woff'), // Modern Browsers
+    url('../assets/fonts/oswald/eot/Oswald-SemiBold.eot'), //IE 9
+    url('../assets/fonts/oswald/eot/Oswald-SemiBold.eot?#iefix') format('embedded-opentype'), //IE 6-8
+    url('../assets/fonts/oswald/ttf/Oswald-SemiBold.ttf') format('truetype'), // Safari, Android, iOS
+    url('../assets/fonts/oswald/woff2/Oswald-SemiBold.svg#Oswald') format('svg'); // Legacy iOS
+}
+
+
+// Bold - 700
+@font-face{
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../assets/fonts/oswald/woff2/Oswald-Bold.woff2') format('woff2'), //Super Mordern Browsers
+    url('../assets/fonts/oswald/woff/Oswald-Bold.woff') format('woff'), // Modern Browsers
+    url('../assets/fonts/oswald/eot/Oswald-Bold.eot'), //IE 9
+    url('../assets/fonts/oswald/eot/Oswald-Bold.eot?#iefix') format('embedded-opentype'), //IE 6-8
+    url('../assets/fonts/oswald/ttf/Oswald-Bold.ttf') format('truetype'), // Safari, Android, iOS
+    url('../assets/fonts/oswald/woff2/Oswald-Bold.svg#Oswald') format('svg'); // Legacy iOS
+}

@@ -1,0 +1,27 @@
+mixin block-gallery (Categories, Product , MottoProduct, ImageProduct, LinkProduct)
+    section.wrap-gallery
+        h2.gallery__title Más Productos
+                hr.gallery__hr
+        div.gallery 
+
+            //-Adaptar los objetos en arreglos
+            -let arrayCategories = Object.values(Categories)
+            -let arrayProduct = Object.values(Product)
+            -let arrayMottoProduct = Object.values(MottoProduct)
+            -let arrayImageProduct = Object.values(ImageProduct)
+            -let arrayLinkProduct = Object.values(LinkProduct)
+            //-Contador
+            -let x = 0
+
+            each category, name in Product
+                -if( x < arrayProduct.length)
+                    div.gallery__box
+                        a(href=arrayLinkProduct[x] + ".html") 
+                            div.gallery__box--img
+                                img(src=arrayImageProduct[x], alt="Imagen de " + arrayProduct[x])
+                            h2!= arrayProduct[x]
+                            p!= arrayMottoProduct[x]
+                    - x++
+
+                
+

@@ -1,0 +1,58 @@
+//Importacion de Bloques
+@use '../blocks/block-menu.scss' as menu;
+@use '../blocks/block-gallery.scss' as gallery;
+@use '../blocks/block-footer.scss' as footer;
+@use '../blocks/block-separate.scss' as separate;
+
+//Importacion de configuraciones
+@use '../config/config.scss' as config;
+
+//Importacion de fuentes
+@use '../fonts/Oswald';
+@use '../fonts/Montserrat';
+@use '../fonts/WebSymbols';
+
+//Inicio de Estilos generales
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.general-wrap {
+    margin: 0px;
+    height: auto;
+}
+
+//Fin de estilos generales
+
+//Importar estilos de menu
+@include menu.block-menu;
+
+//Importar estilos de galeria
+@include gallery.block-gallery(#f7f9f8);
+
+//Importar estilos del footer
+@include footer.block-footer;
+
+//Importar estilos del separador
+@include separate.block-separate;
+
+//Estilos particulares
+.wrap-gallery .gallery__title {
+    padding-top: 80px;
+}
+
+@media (max-width: 600px) {
+    .wrap-gallery .gallery__title {
+        padding-top: 25px;
+        
+        hr{
+            margin-bottom: 5px;
+        }
+    }   
+    .wrap-gallery .gallery {
+        margin-top: 10px;
+    }
+}

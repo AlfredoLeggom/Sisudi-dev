@@ -1,0 +1,31 @@
+extends ../templates/template
+
+block config
+    -actual_page = "recauderia"
+
+    //-Importación de bloques
+    include ../blocks/block-menu
+    include ../blocks/block-product-recauderia
+    //-include ../blocks/block-moda
+    include ../blocks/block-footer
+    //-Importar configuraciones extras
+    include ../config/config-product
+    include ../config/json/json-recauderia
+
+block append description 
+    meta(name="description" content="Te ofrecemos distinta variedad de verdura al mejor precio y calidad")
+
+block header
+    //Inicio de menu
+    +block-menu(Categories, SubCategories, CategoriesIcon, url_mainLogo)
+    //Fin de menu
+    
+block container
+    //Inicio de bloque cervezas para usarse como plantilla
+    +block-product-recauderia(recauderiaProductData, recauderiaDataPage)
+    //Fin de bloque cervezas para usarse como plantilla
+
+block footer
+    //Inicio de Footer
+    +block-footer(title_page, categorias, subCategorias, nameCategorias, nameSubCategorias)
+    //Fin de Footer

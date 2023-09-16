@@ -1,0 +1,26 @@
+mixin block-product-insumos (productData, pageData)
+    section.wrap-product 
+        each data in pageData
+            div.product__data
+                h2!= data.title 
+                hr
+                span
+                    p!= data.subtitle
+                    p!= data.descripcion 
+                    p!= data.comunicate
+                    p 
+                        a(href="./assets/catalogos/catalogo-insumos.pdf" target="_blank") Cátalogo de insumos.pdf 
+            
+            //div.product__cover-page
+                img(src="./assets/images/insumos/cover-page.jpg")
+            div.product__container
+                each product in productData 
+                    div.product-box
+                        div.product-box--img
+                            img(src= product.imgLink)
+                        div.product-box--data
+                            span
+                                p!= product.nombre
+                                ul
+                                    each list in product.descripcion
+                                        li!= list          

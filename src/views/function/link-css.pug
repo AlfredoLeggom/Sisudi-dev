@@ -1,0 +1,10 @@
+//-Link Dinamico     
+mixin link-css (actual_page)
+    if actual_page === 'Inicio'
+        link(rel="stylesheet", href="./styles/index.css")
+        //-
+            link(rel="stylesheet", href="./styles/responsive/index.css")
+    else 
+        link(rel="stylesheet", href="./styles/" + actual_page + ".css")
+        //-
+            link(rel="stylesheet", href="./styles/responsive/" + actual_page + "_responsive.css")

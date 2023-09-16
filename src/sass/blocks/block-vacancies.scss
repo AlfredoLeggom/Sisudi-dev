@@ -1,0 +1,187 @@
+//Importar configuraciones
+@use '../config/config.scss' as config;
+@mixin block-vacancies {
+    .vacancies {
+        background-color: #fafafa;
+
+        &__title {
+            font-family: config.$title-font;
+            padding-top: 85px;
+
+            h2 {
+                text-align: center;
+                font-size: 45px;
+                font-weight: 400;
+                margin: 0px;
+                margin-bottom: 10px;
+            }
+
+            hr {
+                border: none;
+                width: 70px;
+                height: 3px;
+                background-color: config.$Principal-color__orange;
+                margin: 0px auto;
+            }
+        }
+
+        &__data {
+            display: flex;
+            flex-flow: wrap row-reverse;
+
+            font-family: config.$title-font;
+            padding: 50px 75px;
+
+            .img__vacancies-data {
+                align-self: center;
+
+                margin: 0px auto;
+                width: 30%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .content__vacancies-data {
+                h3 {
+                    font-size: 20px;
+                    margin: 15px 0px;
+                    text-transform: uppercase;
+                }
+
+                h4 {
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                }
+
+                ul {
+                    margin-left: 30px;
+                    line-height: 30px;
+                }
+
+                p {
+                    margin-left: 10px;
+                    line-height: 25px;
+                }
+
+                p:last-child {
+                    margin-top: 30px;
+                    margin-left: 0px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    //Responsive
+    @media (max-width: 1190px) {
+        .vacancies__data {
+            display: flex;
+            flex-flow: column-reverse wrap;
+            padding: 40px 0px;
+        }
+        .content__vacancies-data {
+            width: 50%;
+            margin: 0px auto;
+        }
+        .vacancies__data .img__vacancies-data {
+            margin-top: 20px;
+            width: 35%;
+        }
+    }
+
+    @media (max-width: 930px) {
+        .content__vacancies-data {
+            width: 58%;
+        }
+        .vacancies__data {
+            padding: 20px 0;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .content__vacancies-data {
+            width: 65%;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .vacancies__title {
+            padding-top: 75px;
+        }
+        .vacancies__title h2 {
+            font-size: 40px;
+        }
+        .vacancies__data .img__vacancies-data {
+            margin-top: 20px;
+            width: 50%;
+        }
+    }
+
+    @media (max-width: 390px) {
+        .vacancies__title h2 {
+            font-size: 33px;
+        }
+        .content__vacancies-data {
+            width: 80%;
+        }
+        .vacancies__data .content__vacancies-data h3 {
+            font-size: 17px;
+        }
+    }
+
+    @media (max-width: 270px) {
+        .vacancies__data .content__vacancies-data {
+            h3 {
+                font-size: 14px;
+            }
+
+            h4 {
+                font-size: 15px;
+            }
+
+            ul {
+                font-size: 13px;
+                margin-left: 10px;
+                line-height: 21px;
+                strong {
+                    font-size: 13px;
+                }
+            }
+
+            p {
+                font-size: 12px;
+
+                :last-child {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 210px) {
+        .vacancies__data .content__vacancies-data ul {
+            font-size: 11px;
+        }
+        .vacancies__data .content__vacancies-data p {
+            margin: 0px;
+        }
+        .vacancies__data .img__vacancies-data {
+            width: 65%;
+            margin-top: 15px;
+        }
+        .vacancies__title {
+            padding-top: 65px;
+            h2 {
+                font-size: 28px;
+            }
+        }
+    }
+
+    @media (max-width: 150px) {
+        .vacancies__title h2 {
+            font-size: 22px;
+        }
+    }
+}

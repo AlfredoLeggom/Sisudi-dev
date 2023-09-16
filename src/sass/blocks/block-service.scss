@@ -1,0 +1,269 @@
+//Importar configuraciones
+@use '../config/config' as c;
+
+//Importar Fuentes
+@use '../fonts/Montserrat';
+@use '../fonts/Oswald.scss';
+@use '../fonts/WebSymbols.scss';
+
+@mixin block-service {
+    .service {
+        height: auto;
+        background-color: rgb(240, 240, 240);
+
+        &__title {
+            padding-top: 90px;
+            text-align: center;
+            font-family: c.$title-font;
+
+            h2 {
+                font-size: 50px;
+                font-weight: 500;
+                margin: 0px;
+            }
+
+            hr {
+                margin: 20px auto;
+                width: 70px;
+                border: none;
+                height: 3px;
+                background-color: c.$Principal-color__orange;
+            }
+        }
+
+        &__content {
+            display: flex;
+            flex-flow: wrap column;
+            justify-content: space-evenly;
+            align-content: center;
+
+            .content__box {
+                display: flex;
+                flex-flow: wrap row;
+                justify-content: space-evenly;
+                align-content: center;
+
+                width: 80%;
+                margin: 25px;
+                padding: 30px 0px;
+                background-color: white;
+                border: 1px solid #ddd;
+                font-family: c.$title-font;
+
+                section {
+                    float: right;
+                    position: relative;
+                    width: 20%;
+
+                    img {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
+                }
+                .par {
+                    float: right;
+                }
+
+                > article {
+                    display: block;
+                    float: left;
+
+                    text-align: justify;
+                    max-width: 65%;
+                    min-width: 60%;
+                    height: 100%;
+                    margin-top: 8px;
+
+                    h2 {
+                        margin: 0px;
+                        text-align: center;
+                    }
+
+                    p {
+                        padding: 10px 0px;
+                        padding-left: 10px;
+                        font-size: 16px;
+                        line-height: 28px;
+                    }
+
+                    ul {
+                        padding: 10px 35px;
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .clearfix {
+        float: none;
+        clear: both;
+    }
+
+    //Responsive
+    @media (max-width: 1200px) {
+        .service__content .content__box > article {
+            p {
+                font-size: 14px;
+            }
+            h2 {
+                font-size: 25px;
+            }
+            strong {
+                font-size: 18px;
+            }
+            ul {
+                font-size: 14px;
+                text-align: left;
+            }
+        }
+    }
+
+    @media (max-width: 1000px) {
+        .service__content .content__box {
+            width: 90%;
+            margin: 15px;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .service__content .content__box > article {
+            max-width: 55%;
+            min-width: 50%;
+        }
+        .service__content .content__box section {
+            width: 25%;
+        }
+        .service__content .content__box > article p {
+            line-height: 24px;
+        }
+        .service__content .content__box > article ul {
+            line-height: 25px;
+        }
+        .service__title hr {
+            margin: 10px auto;
+        }
+    }
+
+    @media (max-width: 700px) {
+        .service__content .content__box {
+            flex-flow: column-reverse wrap;
+            padding: 15px 0px 25px 0px;
+        }
+        .service__content div:nth-child(2),
+        .service__content div:nth-child(4) {
+            flex-flow: column wrap;
+        }
+        .service__content .content__box {
+            > article {
+                width: 80%;
+                max-width: unset;
+                min-width: unset;
+                p {
+                    padding: 0px;
+                    text-align: justify;
+                    font-size: 14px;
+                    margin-top: 15px;
+                }
+
+                h2 {
+                    font-size: 30px;
+                }
+
+                strong {
+                    font-size: 16px;
+                }
+
+                ul {
+                    padding: 15px 25px 0px 35px;
+                }
+            }
+
+            section {
+                width: unset;
+                max-width: 30%;
+                margin: 0px auto;
+                margin-top: 20px;
+
+                img {
+                    position: static;
+                    transform: unset;
+                    float: unset;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 600px){
+        .service__title {
+            padding-top: 75px;
+        }
+    }
+
+    @media (max-width: 460px){
+        .service__content .content__box > article ul {
+            padding: 15px 25px 0px 25px;
+        }
+        .service__content .content__box > article {
+            width: 90%;
+        }
+        .service__content .content__box > article h2 {
+            font-size: 25px;
+        }
+        .service__title h2 {
+            font-size: 45px;
+        }
+    }
+
+    @media (max-width: 400px){
+        .service__content .content__box > article p {
+            font-size: 13px;
+            strong{
+                font-size: 13px;
+            }
+        }
+        .service__title h2 {
+            font-size: 41px;
+        }
+    }
+
+    @media (max-width: 300px){
+        .service__content .content__box section {
+            max-width: 45%;
+        }
+        .service__content .content__box > article ul {
+            font-size: 13px;
+        }
+        .service__title h2 {
+            font-size: 35px;
+        }
+    }
+
+    @media (max-width: 250px){
+        .service__content .content__box > article h2 {
+            font-size: 20px;
+        }
+        .service__content .content__box {
+            width: 95%;
+        }
+        .service__title hr {
+            margin: 10px auto 0px auto;
+        }
+        .service__title h2 {
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: 210px){
+        .service__title {
+            padding-top: 65px;
+        }
+        .service__title h2 {
+            font-size: 25px;
+        }
+    }
+}

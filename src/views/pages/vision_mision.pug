@@ -1,0 +1,29 @@
+extends ../templates/template.pug
+
+block config
+    - actual_page = 'vision_mision'
+
+    //-Importación de los bloques
+    include ../blocks/block-menu
+    include ../blocks/block-vision
+    include ../blocks/block-footer
+
+    //-Configuraciiones extras
+
+block append description 
+    meta(name="description" content="Satisfacer todas y cada una de las necesidades de nuestros clientes haciendo uso de la innovación para llevar a cabo los procesos en el menor tiempo, con el mejor costo y con la mayor calidad.")
+
+block header
+    //Inicio de menu
+    +block-menu(Categories, SubCategories, CategoriesIcon, url_mainLogo)
+    //Fin de menu
+
+block container
+    //Inicio de vision y mision
+    +block-vision
+    //Fin de vision y mision
+
+block footer
+    //Inicio de footer
+    +block-footer(title_page, categorias, subCategorias, nameCategorias, nameSubCategorias)
+    //Fin de footer

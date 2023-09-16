@@ -1,0 +1,27 @@
+mixin block-footer (title_page, categorias, subCategorias, nameCategorias, nameSubCategorias)
+    footer.footer 
+        section.footer__copyright
+            div
+                p= title_page 
+                p Copyright &copy; 2021 Todos los derechos reservados
+        section.footer__menu 
+            nav.footer-menu 
+                ul.footer-menu
+                    each categoria, indice in categorias
+                        //-Condición para sub-menu
+                        if categoria == 'Inicio'
+                            li.footer-menu__category: a(href = '/')= categoria
+                        else if categoria == 'Sobre Nosotros'
+                            li.footer-menu__category.footer-menu__category--submenu
+                                a= categoria
+                                ul.footer-submenu
+                                    each subCategoria, sub_indice in subCategorias
+                                        li.footer-submenu__category: a(href=nameSubCategorias[sub_indice]  + '.html')= subCategoria 
+                        else 
+                            li.footer-menu__category: a(href = nameCategorias[indice] + '.html')= categoria
+                        
+                    
+
+
+            
+                

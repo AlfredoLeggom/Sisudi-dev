@@ -1,0 +1,20 @@
+mixin block-product-artesania (productData, pageData)
+    section.wrap-product 
+        div.product__data
+            each data in pageData
+                h2!= data.title 
+                hr
+                h3!= data.subtitle
+                span
+                    p!= data.descripcion
+                    p!= data.comunicate
+        div.product__container
+            each product in productData
+                div.product-box
+                    h2= product.nombre
+                    div.product-box--img
+                        img(src= product.imgLink1)
+                        img(src= product.imgLink2)
+                    div.product-box--data
+                        span
+                            h3=product.description

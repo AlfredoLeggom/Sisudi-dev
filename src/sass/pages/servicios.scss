@@ -1,0 +1,30 @@
+// Importacion de Bloques
+@use '../blocks/block-menu' as menu;
+@use '../blocks/block-service' as service; 
+@use '../blocks/block-footer' as footer;
+
+//Importacion de configuraciones
+@use '../config/config' as config;
+
+//Importacion de Fuentes
+@use '../fonts/Oswald';
+@use '../fonts/Montserrat';
+@use '../fonts/WebSymbols';
+
+
+//Inicio de Estilos generales
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+//Fin de Estilos generales
+
+//Importar estilos para menu
+@include menu.block-menu;
+
+//Importar estilos para servicios
+@include service.block-service;
+
+//Importar estilos para footer
+@include footer.block-footer;

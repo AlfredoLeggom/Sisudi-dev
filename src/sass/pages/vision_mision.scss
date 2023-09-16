@@ -1,0 +1,31 @@
+//Importar bloques
+@use '../blocks/block-menu.scss' as menu;
+@use '../blocks/block-footer.scss' as footer;
+@use '../blocks/block-vision.scss' as vision;
+
+//Importación de configuraciones
+@use '../config/config.scss' as config;
+
+//Importación de fuentes
+@use '../fonts/Montserrat.scss';
+@use '../fonts/Oswald.scss';
+@use '../fonts/WebSymbols.scss';
+
+
+//Importar estilos de Menu
+@include menu.block-menu;
+
+//Importar mision y vision
+@include vision.block-vision;
+
+//Importar estilos de footer
+@include footer.block-footer;
+
+//Inicio de estilos generales
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+//Fin de estilos generales
+

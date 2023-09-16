@@ -1,0 +1,103 @@
+mixin block-menu (Categories, SubCategories, CategoriesIcon, url_mainLogo)
+    div.menu#menu
+        div.menu__logo
+            a(href="/") 
+                img(src= url_mainLogo , alt="Logo de proservip", title="Logo de Proservip")
+        div.menu__categories
+             nav.main-nav
+                ul.main-nav
+                    //-Each para imprimir menu
+                    each categories, name in Categories 
+                        //-Condición para agregar la url de la raiz index
+                        if (name === 'inicio')
+                            li.main-nav__categories: a(href='/')!= categories
+
+                        //-Condición para agregar sub menu a una categoria
+                        else if (name === 'sobre_nosotros')
+                            li.main-nav__categories.main-nav__categories--sub-menu 
+                                a!= categories
+                                //Inicio de sub-menu
+                                ul.sub-nav
+                                    each sub_categories, sub_name in SubCategories 
+                                        li.sub-nav__categories: a(href='/' + sub_name + '.html' )!= sub_categories
+                                //Fin de sub-menu
+                        //-Condicón para agregar el resto del menu
+                        else 
+                            li.main-nav__categories: a(href='./' + name + '.html')!= categories
+
+                    //-Each para imprimir los iconos
+                    each icon, icon_name in CategoriesIcon 
+                            li.main-nav__categories.main-nav__categories--icons: a!= icon 
+
+    //-Inicio de modal ubicación 
+    div.wrap-modal--location.close
+        section.container-modal
+            i.fas.fa-times-circle.close-click
+            div.modal__data
+                span 
+                    h2 Dirección de Proservip 
+                    a(href="https://g.page/proservip?share") Playa Guitarrón 312, Reforma Iztaccihuatl Nte., Iztacalco, 08810 Ciudad de México, CDMX 
+                iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.587744062301!2d-99.1333738854535!3d19.386995347161875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ffbc64c44069%3A0x8e1ca47f2fb0a35c!2sPROSERVIP!5e0!3m2!1ses-419!2smx!4v1617510268898!5m2!1ses-419!2smx" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy")
+            div.modal__image
+                img(src="./assets/images/modal/location.svg", alt="Mapa")
+    //-Fin de modal ubicación
+
+    //-Inicio de modal mail
+    div.wrap-modal--mail.close
+        section.container-modal
+            i.fas.fa-times-circle.close-click
+            div.modal__data
+                span 
+                    h2 Correo de Comercializadora
+                    p marketing@comercializadoraproservip.com
+            div.modal__image
+                img(src="./assets/images/modal/mail.svg", alt="mail")
+    //-Fin de modal mail
+
+    //-Inicio de modal phone    
+    div.wrap-modal--phone.close
+        section.container-modal
+            i.fas.fa-times-circle.close-click
+            div.modal__data
+                span 
+                    h2 Telefono de contacto
+                    p (55) 53670487
+            div.modal__image
+                img(src="./assets/images/modal/phone.svg", alt="mail")
+    //-Fin de modal phone
+
+    //-Inicio de Menú para telefonos
+    div.menu-phone#menu-phone
+        div.menu-phone__bars
+            <i class="fas fa-bars" id="menu-bars"></i>
+        div.menu-phone__logo
+            a(href="/") 
+                img(src= url_mainLogo , alt="Logo de proservip", title="Logo de Proservip")
+        div.menu-phone__modals
+            <i class="fas fa-map-marker-alt" id="open-location--phone"></i>
+            <i class="fas fa-envelope" id="open-mail--phone"></i>
+            <i class="fas fa-phone" id="open-phone--phone"></i>
+        div.scroll#scroll
+            i.fas.fa-arrow-up
+    div.dropdown-menu#dropdown-menu
+        nav.main-nav--phone
+            ul.main-nav--phone
+                //-Each para imprimir menu
+                each categories, name in Categories 
+                    //-Condición para agregar la url de la raiz index
+                    if (name === 'inicio')
+                        li.main-nav__categories: a(href='/')!= categories
+
+                    //-Condición para agregar sub menu a una categoria
+                    else if (name === 'sobre_nosotros')
+                        li.main-nav__categories.main-nav__categories--sub-menu 
+                            a!= categories
+                            //Inicio de sub-menu
+                            ul.sub-nav
+                                each sub_categories, sub_name in SubCategories 
+                                    li.sub-nav__categories: a(href='/' + sub_name + '.html' )!= sub_categories
+                            //Fin de sub-menu
+                    //-Condicón para agregar el resto del menu
+                    else 
+                        li.main-nav__categories: a(href='./' + name + '.html')!= categories
+    //-Fin de Menú para telefonos           

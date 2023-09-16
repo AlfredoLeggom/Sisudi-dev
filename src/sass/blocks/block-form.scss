@@ -1,0 +1,286 @@
+//Importar configuración
+@use '../config/config' as config;
+
+//Importar Fuentes
+@use '../fonts/Montserrat';
+@use '../fonts/Oswald.scss';
+@use '../fonts/WebSymbols.scss';
+
+@mixin block-form {
+    .contact .webSymbols {
+        font-family: config.$symbol-font !important;
+        font-size: 15px;
+        margin-right: 5px;
+        color: config.$Principal-color__orange;
+    }
+
+    .contact {
+        height: auto;
+        background-color: #ddd;
+        padding: 60px 0px;
+
+        &__title {
+            text-align: center;
+            font-family: config.$title-font;
+            font-size: 35px;
+            font-weight: 400;
+            text-transform: uppercase;
+
+            hr {
+                width: 70px;
+                margin: 20px auto;
+                border: 0px;
+                height: 3px;
+                background-color: config.$Principal-color__orange;
+            }
+        }
+
+        &__form {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            width: 85%;
+            margin: 10px auto;
+
+            input,
+            button {
+                flex-basis: 0px;
+                flex-grow: 1;
+
+                margin: 10px;
+                padding: 10px;
+                font-family: config.$title-font;
+                font-weight: 500;
+                font-size: 15px;
+            }
+
+            input[type="text"],
+            [type="mail"],
+            [type="tel"] {
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-shadow: 0px 0px 2px #ccc;
+            }
+
+            button {
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-shadow: 0px 0px 2px #ccc;
+                background-color: config.$Principal-color__orange;
+                color: white;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: all 250ms;
+            }
+
+            //Efectos Hover del formulario
+            &__form button:hover {
+                box-shadow: 0px 0px 2px white inset;
+                border-color: white;
+            }
+        }
+
+        &__info {
+            display: flex;
+            justify-content: space-between;
+
+            width: 85%;
+            margin: 10px auto 0px auto;
+
+            .data {
+                position: relative;
+                flex-basis: 35%;
+                margin-right: 30px;
+                padding: 12px;
+
+                font-family: config.$title-font;
+                font-size: 17px;
+
+                p{
+                    margin-top: 15px;
+                    color: config.$Principal-color__orange;
+
+                    .fas{
+                        font-size: 17px;
+                    }
+                    .fab{
+                        font-size: 22px;
+                    }
+
+                    &:last-child {
+                        position: absolute;
+
+                        top: 80%;
+
+                        a{
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            span{
+                                font-size: 35px;
+                            }
+                        }
+                    }
+                }                
+            }
+
+            .googlemap {
+                flex-basis: 65%;
+                padding: 20px;
+                border: none;
+                height: 450px;
+            }
+
+            img {
+                width: 30px;
+            }
+        }
+    }
+
+    //Responsive
+    @media (max-width: 1050px){
+        .contact__info {
+            width: 90%;
+        }
+        .contact__form {
+            width: 90%;
+        }
+        .contact {
+            padding: 40px 0;
+        }
+    }
+
+    @media (max-width: 1000px){
+        .contact__form, .contact__form {
+
+            button{
+                flex-basis: 20%;
+                flex-grow: 0;
+            }
+
+            input{
+                flex-basis: 45%;
+                flex-grow: 1;
+            }
+        }
+    }
+
+    @media (max-width: 870px){
+        .contact__info .googlemap {
+            padding: 0px;
+            height: 360px;
+        }
+        .contact {
+            padding: 15px 0;
+        }
+        .contact__info .googlemap {
+            flex-basis: 30%;
+        }
+    }
+
+    @media (max-width: 835px){
+        .contact__info .data {
+            margin-right: 0px;
+        }
+        .contact__info .data {
+            padding: 0px;
+        }
+    }
+
+    @media (max-width:800px){
+        .contact__info .googlemap {
+            display: none;
+        }
+        .contact__info .data {
+            flex-grow: 1;
+            height: 245px;
+            padding: 0px 12px;
+        }
+    }
+
+    @media (max-width: 470px){
+        .contact__info {
+            margin: 0px auto;
+            width: 100%;
+
+            .data{
+                padding: 0px;
+                padding-left: 25px;
+                font-size: 14px;
+                height: 260px;
+
+                p{
+                    width: 95%;
+                    padding-right: 8px;
+                }
+            }
+        }
+        .contact__form{
+            width: 95%;
+        }
+    }
+
+    @media (max-width: 380px) {
+        .contact__form{
+            justify-content: center;
+        }
+        .contact__info .data {
+            padding: 0 0 0 20px;
+            font-size: 13px;
+        }
+        .contact__info .data > p:last-child a .webSymbols {
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: 350px) {
+        .data__mail{
+            display: none;
+        }
+        .contact__info .data p{
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 300px){
+
+        .contact__info .data {
+            padding-left:15px;
+        }
+        .contact__form button, .contact__form input {
+            font-size: 12px;
+        }
+        .contact__title {
+            margin: 0px;
+            font-size: 27px;
+
+            hr{
+                margin: 15px auto;
+            }
+        }
+
+    }
+
+    @media (max-width: 260px) {
+        .contact__form button, .contact__form input {
+            margin: 5px auto;
+            padding: 5px;
+        }
+    }
+
+    @media (max-width: 200px) {
+        .contact__info .data {
+            padding-left: 10px;
+            font-size: 11px;
+        }
+        .contact__form input {
+            flex-basis: 95%;
+            flex-grow: 0;
+            font-size: 10px;
+            padding: 5px 3px;
+        }
+        .contact__title {
+            font-size: 20px;
+        }
+    }
+}

@@ -1,0 +1,225 @@
+//Importar bloques
+@use '../blocks/block-menu.scss' as menu;
+@use '../blocks/block-product.scss' as product;
+@use '../blocks/block-footer.scss' as footer;
+
+//Importar configuraciones
+@use '../config/config.scss' as config;
+
+//Importar fuentes
+@use '../fonts/Montserrat.scss';
+@use '../fonts/Oswald.scss';
+@use '../fonts/WebSymbols.scss';
+
+//Importar estilos de menu
+@include menu.block-menu;
+
+//Importar estilos de productos
+@include product.block-product;
+
+//Importar estilos de footer
+@include footer.block-footer;
+
+//Inicio de estilos generales
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.wrap-product {
+    font-family: config.$title-font;
+
+    h2 {
+        text-align: center;
+        margin: 20px 0px;
+    }
+
+    .product__container {
+        //Tamaño para casilla de arcones
+        div[category="arcones"] {
+            .product-box--img {
+                flex-basis: 70%;
+            }
+            .product-box--data {
+                flex-basis: 20%;
+                flex-grow: 1;
+            }
+        }
+        //Tamaño para casilla de arcones
+
+        //Tamaño para casilla de arcones
+        div[category="agendas"] {
+            .product-box--img {
+                flex-basis: 30%;
+            }
+            .product-box--data {
+                flex-basis: 60%;
+                flex-grow: 1;
+            }
+        }
+        //Tamaño para casilla de arcones
+
+        .product-box {
+            display: flex;
+            flex-flow: nowrap column;
+            justify-content: flex-start;
+            align-content: center;
+
+            &--img {
+                background-color: white;
+                align-items: center;
+
+                img {
+                    display: block;
+                    max-width: 100%;
+                    max-height: 100%;
+                    margin: 0px auto;
+                }
+            }
+
+            &--data {
+                span {
+                    align-items: center;
+                    p {
+                        text-align: center;
+                        font-size: 17px;
+                        font-weight: 600;
+                    }
+
+                    ul {
+                        padding: 5px;
+                        font-size: 13px;
+                        list-style-position: inside;
+                        line-height: 1.8;
+                    }
+                }
+            }
+        }
+    }
+}
+//Fin de estilos generales
+
+//Inicio de Responsive
+@media (max-width: 850px) {
+    .wrap-product .product__data h2 {
+        font-size: 40px;
+    }
+    .wrap-product .product__data h3 {
+        font-size: 22px;
+    }
+    .wrap-product .product__data span {
+        font-size: 15px;
+    }
+    .wrap-product h2 {
+        font-size: 28px;
+    }
+    .wrap-product .product__container .product-box {
+        flex-basis: 30%;
+    }
+    .wrap-product
+        .product__container
+        .product-box--agendas
+        .product-box--img
+        img {
+        max-width: 100%;
+        height: auto;
+        max-height: 80%;
+    }
+    .wrap-product .product__container .product-box {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-content: center;
+    }
+    .wrap-product .product__container .product-box--agendas .product-box--img {
+        flex-basis: 0%;
+    }
+}
+
+@media (max-width: 700px) {
+    .wrap-product .product__data h2 {
+        font-size: 36px;
+    }
+    .wrap-product .product__data h3 {
+        font-size: 20px;
+    }
+    .wrap-product .product__data span {
+        font-size: 14px;
+    }
+    .wrap-product .product__container {
+        margin: 0px auto;
+    }
+    .wrap-product h2 {
+        margin: 10px 0;
+    }
+    .wrap-product .product__container .product-box {
+        flex-basis: 35%;
+    }
+    .wrap-product .product__container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .wrap-product .product__data h3 {
+        margin-top: 15px;
+    }
+    .wrap-product .product__container .product-box--data span p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    .wrap-product .product__container .product-box {
+        flex-basis: 50%;
+    }
+    .wrap-product .product__data h2 {
+        font-size: 30px;
+    }
+    .wrap-product h2 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+    .wrap-product h2 {
+        font-size: 23px;
+    }
+    .wrap-product .product__data h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 385px) {
+    .wrap-product .product__menu .category-menu {
+        padding: 10px 5px;
+    }
+    .wrap-product .product__menu {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    .wrap-product .product__container .product-box {
+        flex-basis: 60%;
+    }
+}
+
+@media (max-width: 320px) {
+    .wrap-product h2 {
+        font-size: 22px;
+        padding: 0px 8px;
+    }
+    .wrap-product .product__data h2 {
+        font-size: 25px;
+    }
+    .wrap-product .product__data h3 {
+        font-size: 16px;
+    }
+    .wrap-product .product__data span {
+        font-size: 12px;
+    }
+}
+
+//Fin de Responsive

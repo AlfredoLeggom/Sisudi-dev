@@ -1,0 +1,19 @@
+//-Slider heco con Glider
+mixin block-slider2 (clients)
+    section.client-slider
+        div.client-slider__title
+            h2 Clientes
+            hr
+
+        div.client-slider__content
+
+            div.client-slider__list--client
+                each client in clients
+                    div.client-slider__element--client                  
+                        img(src= client.url alt= client.name)       
+
+            div.content-slider__rigth--client
+                <i class="fas fa-chevron-circle-right"></i>
+            div.content-slider__left--client
+                <i class="fas fa-chevron-circle-left"></i>
+            div.client-slider__pagination(role="tablist")

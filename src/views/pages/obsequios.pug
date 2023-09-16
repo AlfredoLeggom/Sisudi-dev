@@ -1,0 +1,35 @@
+extends ../templates/template
+
+block config
+    -actual_page = "obsequios"
+
+    //-Importación de bloques
+    include ../blocks/block-menu
+    include ../blocks/block-product-obsequios
+    include ../blocks/block-footer
+
+    //-Importar configuraciones extras
+    include ../config/config-product
+    include ../config/json/json-obsequios
+
+block append description 
+    meta(name="description" content="Adquiere los Arcones y Agendas para tus regalos de fin de año con la mejor calidad y al mejor precio.")
+
+block header
+    //Inicio de menu
+    +block-menu(Categories, SubCategories, CategoriesIcon, url_mainLogo)
+    //Fin de menu
+    
+block container
+    //Inicio de moda
+    +block-product-obsequios(obsequiosProductData, obsequiosDataPage)
+    //Fin de moda
+
+block footer
+    //Inicio de Footer
+    +block-footer(title_page, categorias, subCategorias, nameCategorias, nameSubCategorias)
+    //Fin de Footer
+
+append scripts
+    //-Script del menu dinamico para seleccionar productos
+    script(src="../script/menu-product.js" type="text/javascript") 

@@ -1,0 +1,30 @@
+extends ../templates/template
+
+block config
+    -actual_page = "artesanias"
+
+    //-Importación de bloques
+    include ../blocks/block-menu
+    include ../blocks/block-product-artesania
+    //-include ../blocks/block-moda
+    include ../blocks/block-footer
+    //-Importar configuraciones extras
+    include ../config/config-product
+    
+block append description 
+    meta(name="description" content="Estas auténticas obras de arte, figuras de bronce realizadas por nuestros maestros artesanos siguiendo técnicas fieles a la tradición")
+
+block header
+    //Inicio de menu
+    +block-menu(Categories, SubCategories, CategoriesIcon, url_mainLogo)
+    //Fin de menu
+    
+block container
+    //Inicio de moda
+    +block-product-artesania(artesaniasProductData, artesaniasDataPage)
+    //Fin de moda
+
+block footer
+    //Inicio de Footer
+    +block-footer(title_page, categorias, subCategorias, nameCategorias, nameSubCategorias)
+    //Fin de Footer

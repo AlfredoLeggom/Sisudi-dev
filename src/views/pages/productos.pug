@@ -1,0 +1,39 @@
+extends ../templates/template.pug
+
+block config
+    - actual_page = 'productos'
+
+    //-Importar configuraciones extras
+    include ../config/config-product
+    include ../config/config-data
+
+    //-Importar bloques
+    include ../blocks/block-menu
+    include ../blocks/block-separate
+    include ../blocks/block-gallery
+    include ../blocks/block-footer
+
+block append description 
+    meta(name="description" content="Nuestra actividad principal es ofrecer los mejores productos para su empresa, lo cual nos ha permitido distinguirnos como una empresa que se preocupa por la calidad,")
+
+block header
+
+    //Inicio de menu
+    +block-menu(Categories, SubCategories, CategoriesIcon, url_mainLogo)
+    //Fin de menu
+
+block container
+
+    //Inicio de gallery
+    +block-gallery(Categories, Product , MottoProduct, ImageProduct, LinkProduct)
+    //Fin de gallery
+
+    //Inicio de separate
+    +block-separate()
+    //Fin de separate
+block footer 
+
+    //Inicio de footer
+    +block-footer(title_page, categorias, subCategorias, nameCategorias, nameSubCategorias)
+    //Fin de footer
+

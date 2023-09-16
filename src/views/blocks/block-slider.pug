@@ -1,0 +1,29 @@
+mixin block-slider (mostSelledProducts)
+    section.product-slider
+        div.product-slider__title
+            h2 Productos mas vendidos 
+            hr
+
+        div.product-slider__content
+            div.content-slider__img
+                ul.slide-elements
+                    each products in mostSelledProducts
+                        li 
+                            img(src= products.url alt= products.name)
+
+                            div.slide-elements__data
+                                p
+                                    strong= products.name 
+                                    span= products.description
+                                
+                                a(href="./productos.html") Ir a ver
+            
+            div.content-slider__pagination
+                ol                      
+            
+            div.content-slider__rigth
+                <i class="fas fa-chevron-circle-right"></i>
+
+            div.content-slider__left
+                <i class="fas fa-chevron-circle-left"></i>
+                        

@@ -1,0 +1,168 @@
+//Importar configuraciones
+@use '../config/config.scss' as config;
+
+//Importar Fuentes
+@use '../fonts/Montserrat';
+@use '../fonts/Oswald.scss';
+@use '../fonts/WebSymbols.scss';
+
+@mixin block-slider-dos() {
+    .client-slider {
+        margin-top: 35px;
+
+        &__title {
+            font-family: config.$title-font;
+
+            h2 {
+                text-align: center;
+                font-size: 40px;
+                margin: 10px;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+
+            hr {
+                margin: 0px auto;
+                margin-bottom: 30px;
+                width: 70px;
+                height: 3px;
+                border: 0px;
+                background-color: config.$Principal-color__orange;
+            }
+        }
+
+        &__content {
+            position: relative;
+            width: 85%;
+            height: 100%;
+            margin: 0px auto;
+            padding-bottom: 25px;
+
+            .client-slider__list--client {
+                overflow: hidden;
+
+                .client-slider__element--client {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        max-width: 85%;
+                    }
+                }
+            }
+
+            .content-slider__rigth--client {
+                position: absolute;
+                top: 40%;
+                right: -30px;
+
+                font-size: 30px;
+                color: #2c2d34;
+                transition: all 300ms;
+                cursor: pointer;
+            }
+
+            .content-slider__left--client {
+                position: absolute;
+                top: 40%;
+                left: -30px;
+
+                font-size: 30px;
+                color: #2c2d34;
+                transition: all 300ms;
+                cursor: pointer;
+            }
+
+            //evento hover
+            .content-slider__rigth--client:hover i {
+                color: config.$Principal-color__orange;
+            }
+
+            .content-slider__left--client:hover i {
+                color: config.$Principal-color__orange;
+            }
+
+            .client-slider__pagination {
+                margin-top: 20px;
+
+                .active {
+                    background-color: config.$Principal-color__orange;
+                }
+            }
+        }
+    }
+
+    //Inicio de Responsive 
+    @media (max-width: 900px){
+        .client-slider__element--client{
+            padding: 50px;
+        }
+    }
+
+    @media (max-width: 800px){
+        .client-slider__element--client{
+            padding: 30px;
+        }
+    }
+    
+    @media (max-width: 700px){
+        .client-slider__element--client{
+            padding: 0px;
+        }
+    }
+
+    @media (max-width: 500px) {
+
+        .client-slider__content .content-slider__left--client{
+            left: 0px;
+        }
+
+        .client-slider__content .content-slider__rigth--client {
+            right: 0px;
+        }
+
+        .glider-dot{
+            margin: 2px !important;
+        }
+
+        .client-slider__content .client-slider__list--client .client-slider__element--client{
+            padding: 0px 20px;
+        }
+
+        .client-slider__title hr{
+            margin: 0px auto;
+        }
+    }
+
+    @media (max-width: 300px){
+
+        .client-slider__title h2{
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: 250px){
+
+        .client-slider__content .client-slider__pagination{
+            display: none;
+        }
+
+        .client-slider__content .content-slider__left--client,
+        .client-slider__content .content-slider__rigth--client{
+            font-size: 25px;
+        }
+    }
+
+    @media (max-width: 185px){
+
+        .client-slider__content .client-slider__list--client 
+        {
+            .client-slider__element--client{
+                padding: 0px;
+                width: 80% !important;
+            }
+
+        }
+    }
+    //Fin de Responsive
+}

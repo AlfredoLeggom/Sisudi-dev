@@ -1,0 +1,37 @@
+mixin block-product-obsequios (productData, pageData)
+    section.wrap-product 
+        div.product__data
+            each data in pageData
+                h2!= data.title 
+                hr
+                h3!= data.subtitle
+                span
+                    p!= data.descripcion
+                    p!= data.comunicate
+        div.product__menu
+            div(category='all' class='category-menu'): p Todos
+            each data in productData
+                div(category=data.value  class='category-menu'): p= data.categoria
+        div.wrap-list
+
+            //-Arcones
+            each data in productData
+                div(category=data.value).product__section-title.product__data
+                    h2= data.categoria
+                    hr
+                div(category=data.value).product__container
+                    each product in data.productos
+                        div.product-box(category= data.value)
+                            div.product-box--img
+                                img(src= product.imgLink)
+                            div.product-box--data
+                                span
+                                    if product.modelo !== undefined
+                                        p= 'Modelo: ' + product.modelo
+                                        p= product.descripcion
+                                    else if product.nombre !== undefined
+                                        p= product.nombre
+                                        ul
+                                            each list in product.caracteristicas
+                                                li= list
+                                                                          

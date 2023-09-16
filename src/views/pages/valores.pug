@@ -1,0 +1,30 @@
+extends ../templates/template
+
+block config
+
+    -actual_page = 'valores'
+
+    //-Importar los bloques
+    include ../blocks/block-menu
+    include ../blocks/block-values
+    include ../blocks/block-footer
+
+    //-Configuraciones extras
+    
+block append description 
+    meta(name="description" content="Liderazgo e Innovación, Respeto, Honestidad, Vocación de Servicio, Calidad y Productividad")
+
+block header 
+    //Inicio de Menú
+    +block-menu(Categories, SubCategories, CategoriesIcon, url_mainLogo)
+    //Fin de Menú
+
+block container
+    //Inicio de Values
+    +block-values
+    //Fin de Values
+
+block footer
+    //Inicio de footer
+    +block-footer(title_page, categorias, subCategorias, nameCategorias, nameSubCategorias)
+    //Fin de footer

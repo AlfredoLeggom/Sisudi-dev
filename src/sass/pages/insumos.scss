@@ -1,0 +1,216 @@
+//Importar bloques
+@use '../blocks/block-menu.scss' as menu;
+@use '../blocks/block-product.scss' as product;
+@use '../blocks/block-footer.scss' as footer;
+
+//Importar configuraciones
+@use '../config/config.scss' as config;
+
+//Importar fuentes
+@use '../fonts/Montserrat.scss';
+@use '../fonts/Oswald.scss';
+@use '../fonts/WebSymbols.scss';
+
+//Importar estilos de menu
+@include menu.block-menu;
+
+//Importar estilos de productos
+@include product.block-product;
+
+//Importar estilos de footer
+@include footer.block-footer;
+
+//Inicio de estilos generales
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+//Fin de estilos generales
+
+.wrap-product {
+    background-color: rgba(252, 252, 252, 0.863);
+    .product__data{
+        span{
+            margin-top: 5px;
+            a{
+                font-weight: 700;
+            }
+        }
+    }
+    .product__cover-page {
+        display: block;
+        width: 90%;
+        margin: 0px auto;
+        border-radius: 5%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    span {
+        display: block;
+        width: 80%;
+        margin: 0px auto;
+        font-family: config.$title-font;
+        h2 {
+            text-align: center;
+            font-size: 30px;
+        }
+        p {
+            font-size: 20px;
+            margin-top: 5px;
+        }
+        strong {
+            font-size: 20px;
+            :last-child {
+                font-size: 16px;
+            }
+        }
+        P:last-child{
+            font-size: 17px;
+            strong {
+                font-size: 17px;
+                
+            }
+        }
+    }
+
+    .product__container {
+        flex-flow: wrap row;
+
+        .product-box {
+            flex-basis: 85%;
+
+            display: flex;
+            flex-flow: wrap row;
+
+            &--img {
+                justify-content: center;
+                align-items: center;
+                flex-basis: 60%;
+                width: 60%;
+
+                img {
+                    display: block;
+                    max-width: 100%;
+                    max-height: 300px;
+                }
+            }
+
+            &--data {
+                flex-basis: 40%;
+                width: 40%;
+                padding: 30px;
+
+                p{
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
+                ul{
+                    list-style-position: inside;
+                    margin: 10px;
+
+                    li{
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Inicio de Responsive
+@media (max-width: 1293px){
+    .wrap-product .product__container .product-box {
+        flex-flow: column nowrap;
+    }
+    .wrap-product .product__container .product-box {
+        flex-basis: 40%;
+    }
+    .wrap-product .product__container .product-box--img {
+        flex-basis: 100%;
+        width: 100%;
+    }
+    .wrap-product .product__container .product-box--data {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .wrap-product .product__container .product-box--img {
+        align-items: center;
+        background-color: white;
+    }
+}
+
+@media (max-width: 715px){
+    .wrap-product .product__data h2 {
+        margin-top: 10px;
+    }
+    .wrap-product span h2 {
+        font-size: 25px;
+    }
+    .wrap-product span strong {
+        font-size: 17px;
+    }
+    .wrap-product span p {
+        font-size: 15px;
+    }
+    .wrap-product span P:last-child, .wrap-product span P:last-child strong {
+        font-size: 15px;
+    }
+    .wrap-product .product__container {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 653px){
+    .wrap-product .product__container .product-box {
+        flex-basis: 70%;
+    }
+}
+
+@media (max-width: 600px){
+    .wrap-product .product__data h2 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 550px){
+    .wrap-product .product__container .product-box--data p {
+        font-size: 17px;
+    }
+    .wrap-product .product__container .product-box--data ul {
+        font-size: 15px;
+    }
+    .wrap-product .product__container .product-box--data {
+        padding: 0px;
+    }
+}
+
+@media (max-width: 400px){
+    .wrap-product .product__data h2 {
+        font-size: 35px;
+    }
+    .wrap-product span h2 {
+        font-size: 22px;
+    }
+    .wrap-product span strong {
+        font-size: 15px;
+    }
+    .wrap-product span p, .wrap-product span P:last-child, .wrap-product span P:last-child strong {
+        font-size: 13px;
+    }
+    .wrap-product .product__container .product-box--data p {
+        font-size: 15px;
+    }
+    .wrap-product .product__container .product-box--data ul {
+        font-size: 13px;
+    }
+}
+//Fin de responsive
+

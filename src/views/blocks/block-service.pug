@@ -1,0 +1,28 @@
+mixin block-service (dataService)
+    section.service
+        div.service__title
+            h2 Servicios
+            hr 
+        //-Cajas de contenido
+        div.service__content
+            each service in dataService
+                div.content__box   
+                    if service.number
+                        article
+                            h2= service.name
+                            p!= service.data
+                        section.par
+                            img(src=service.urlImage, alt="Logo de " + service.name)
+                        div.clearfix
+
+                    else
+                        section 
+                            img(src=service.urlImage, alt="Logo de " + service.name)
+                        article
+                            h2= service.name
+                            p!= service.data  
+                        div.clearfix
+
+
+
+

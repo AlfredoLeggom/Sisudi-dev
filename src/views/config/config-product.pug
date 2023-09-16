@@ -1,0 +1,264 @@
+//- Categorias de los productos 
+- 
+    let Product = {
+
+        moda_y_estilo: "Moda y Estilo",
+        cervezas: "Cervezas",
+        tecnologia_y_comunicación: "Tecnología y Comunicación",
+        obsequios_de_fin_de_año: "Obsequios de fin de año",
+        insumos_medicos: "Insumos Médicos",
+        artesanias: "Artesanias",
+        linea_blanca: "Linea Blanca",
+        recauderia: "Recauderia"
+    }  
+
+    let MottoProduct = {
+
+        moda_y_estilo: "Luce tu outfit perfecto",
+        cervezas: "Calidad y frescura a tu servicio",
+        tecnologia_y_comunicación: "Lo mas moderno y novedoso",
+        obsequios_de_fin_de_año: "El regalo perfecto",
+        insumos_medicos: "La calidad es nuestro bien mas preciado",
+        artesanias: "Apoyo a artesanos Mexicanos",
+        linea_blanca: "Lo mejor para tu hogar",
+        recauderia: "Lo mas fresco para tu hogar"
+    }
+
+    let ImageProduct = {
+
+        moda_y_estilo: "./assets/images/productos/ropa.png",
+        cervezas: "./assets/images/productos/cerveza.svg",
+        tecnologia_y_comunicación: "./assets/images/productos/digitales.png",
+        obsequios_de_fin_de_año: "./assets/images/productos/fin de año.png",
+        insumos_medicos: "./assets/images/productos/medico.png",
+        artesanias: "./assets/images/productos/arte.png",
+        linea_blanca: "./assets/images/productos/linea-blanca.png",
+        recauderia: "./assets/images/productos/recauderia.png"
+    }
+
+    let LinkProduct = {
+
+        moda_y_estilo: "moda",
+        cervezas: "cervezas",
+        tecnologia_y_comunicación: "tecnologia",
+        obsequios_de_fin_de_año: "obsequios",
+        insumos_medicos: "insumos",
+        artesanias: "artesanias",
+        linea_blanca: "linea_blanca",
+        recauderia: "recauderia"
+    }
+
+//- Inicio de Objeto con informacion que se mostrará en la parte de productos
+-
+    let insumosProductData = [
+        {
+            nombre: 'Gel antibacterial',
+            imgLink: './assets/images/insumos/insumos_1.jpg',
+            descripcion: [
+                'Producto germicida a base de alcohol en forma de gel.',
+                 'Formula a 70% alcohol',
+                'Sin parabenos ni sensación pegajosa',
+                'Sin sensación de resequedad',
+                'Protección antibacterial',
+                'Seguros para el uso en la piel',
+
+                'Presentaciones con dosificador',
+                '500ml',
+                '60ml'
+            ]
+        },
+        {
+            nombre: 'Sanitizantes',
+            imgLink: './assets/images/insumos/insumos_2.jpg',
+            descripcion: [
+                'Producto antibacterial biodegradable',
+                'Formula a base de alcohol',
+                'No contiene cloro',
+                'No irrita, no mancha ni decolora',
+                'Ideal para desinfectar superficies',
+                'Sin residuos dañinos para las superficies.',
+                'Presentaciones: 20L 1L 120ml con aspersor'
+            ]
+
+        },
+        {
+            nombre: 'Cubrebocas tricapa termosellado',
+            imgLink: './assets/images/insumos/insumos_3.jpg',
+            descripcion: [
+                'Cubre bocas elaborado con 3 capas SMS', 
+                'Bandas de elástico ultra suave adheridas con termosellado y ajustador nasal',
+                'Material hipoalergénico', 
+                'Resistente a líquidos, desechable',
+                'Filtra eficazmente el polvo, los gases de escape, la niebla, el polen y más',
+                'presentación: caja con 50 pz color Negro' 
+            ]
+        },
+        {
+            nombre: 'Desinfectantes',
+            imgLink: './assets/images/insumos/insumos_4.jpg',
+            descripcion: [
+                'Producto desinfectante para superficies',
+                'Acción bactericida, viricida, fungicida y esporicida, elimina en segundos el 99.99% de cualquier tipo de virus',
+                'Formulado a base de ácido hipocloroso, ion hipoclorito, dióxido de cloro y ozono',
+                'PH neutro, no corrosivo, líquido transparente, homogéneo incoloro, sin partículas en suspensión ni sedimentación, biodegradable',
+                'Seguros para el uso en la piel',
+                'Presentaciones con aspersor ',
+                'Presentaciones: 1L 60ml'
+            ]
+        },
+        {
+            nombre: 'Cabina desinfectante',
+            imgLink: './assets/images/insumos/insumos_5.jpg',
+            descripcion: [
+                'Modulo portátil desarmable',
+                'Acabados en aluminio para contener el humo',
+                'Puertas de cristal',
+                'Temporizador y bomba',
+                'Contenedor para producto'
+
+            ]
+        },
+        {
+            nombre: 'Guantes para cirujia',
+            imgLink: './assets/images/insumos/insumos_6.jpg',
+            descripcion: [
+                    'Caja con 50 blister par.',
+                    'Desechables.',
+                    'No tóxicos.',
+                    'Con Cuello o Ribete que asegura su adecuada fijación.',
+                    'Extremadamente bajos en polvo absorbente grado medico, U.S.P.',
+                    'Tallas: 6.5, 7.0, 7.5, 8.0, 8.5.',
+                    'Estériles (EO gas).'
+            ]
+        },
+        {
+            nombre: 'Guantes para exploración',
+            imgLink: './assets/images/insumos/insumos_7.jpg',
+            descripcion: [
+                    'Caja con 100 guantes ambidiestros',
+                    'Desechables',
+                    'No toxicos',
+                    'Con Cuello o Ribete que asegura su adecuada fijación.',
+                    'Extremadamente bajos en polvo absorbente grado medico, U.S.P.',
+                    'Tallas: Chico, mediano, grande.',
+                    'Estériles (EO gas).'
+            ]
+        },
+        {
+            nombre: 'Cubrebocas KN95',
+            imgLink: './assets/images/insumos/insumos_8.jpg',
+            descripcion: [
+                'Protégete de virus y bacterias', 
+                'El material del que está compuesto el cubrebocas es de Poliamida 100%',
+                'Fácil de ajustar al rostro', 
+                'Reutilizable hasta un máximo de 7 días', 
+                'No dificulta la respiración y sus elásticos no se deforman',
+                '5 Capas de Filtración.',
+                'Hidrofobico.',
+                'Diseño liviano y ergonómico.'
+            ]
+        },
+        {
+            nombre: 'Careta de Policarbonato',
+            imgLink: './assets/images/insumos/insumos_9.jpg',
+            descripcion: [
+                'Reutilizable y muy ligera',
+                'Hecha a base de policarbonato, tiene recubrimientos anti empañamiento y anti rayones',
+                'Ofrece una barrera de protección física'
+            ]            
+        }
+        
+    ]
+
+    let artesaniasProductData = [
+        {
+            number: 1,
+            nombre: 'Oso grizzly',
+            imgLink1: './assets/images/artesania/artesania1.jpg',
+            imgLink2: './assets/images/artesania/artesania2.jpg',
+            description: 'fundido en bronce, pátina café 30 cm de alto'
+        },
+        {
+            number: 2,
+            nombre: 'Horangutan',
+            imgLink1: './assets/images/artesania/artesania3.jpg',
+            imgLink2: './assets/images/artesania/artesania4.jpg',
+            description: 'fundido en bronce, pátina café 30 cm de alto'
+        },
+    ]
+//- Fin de Objeto con informacion que se mostrará en la parte de productos
+
+//-Inicio de datos para las paginas de productos
+-
+    modaDataPage = [
+        {
+            title: 'Moda y Estilo',
+            subtitle: 'Vestidos Exclusivas',
+            descripcion: 'Adéntrate a nuestro catalogo de prendas exclusivas del diseñador Joseph Ribkoff, existen menos de 5 distribuidores en México',
+            comunicate: 'Para mayor comunicación sobre productos, disponibilidad y pedidos comunícate con nosotros <strong>55 8804 5455</strong>'
+        }
+    ]
+
+    cervezasDataPage = [
+        {
+            title: 'Bebidas',
+            subtitle: '',
+            descripcion: 'Te ofrecemos diversos productos del grupo Modelo a un precio competitivo (solo encargos por caja).',
+            comunicate: 'Para mayor comunicación sobre productos, disponibilidad y pedidos comunícate con nosotros <strong>55 8804 5455</strong>'
+        }
+    ]
+
+    tecnologiaDataPage = [
+        {
+            title: 'Tecnologia y Comunicación',
+            subtitle: 'Televisiones',
+            descripcion: 'Revisa nuestro catalogo de las mejores pantallas y laptops a precios únicos',
+            comunicate: 'Para mayor comunicación sobre productos, disponibilidad y pedidos comunícate con nosotros <strong>55 8804 5455</strong>'
+        }
+    ]
+
+    obsequiosDataPage = [
+        {
+            title: 'Obsequios de fin de año',
+            subtitle: 'Arcones y Agendas',
+            descripcion: 'Adquiere los Arcones y Agendas para tus regalos de fin de año con la mejor calidad y al mejor precio.',
+            comunicate: 'Para mayor comunicación sobre productos, disponibilidad y pedidos comunícate con nosotros <strong>55 8804 5455</strong>'
+        }
+    ]
+
+    insumosDataPage = [
+        {
+            title: 'Insumos Médicos',
+            subtitle: '<strong>Tu seguridad es nuestra prioridad</strong>',
+            descripcion: 'Conoce nuestros productos e insumos médicos por la contingencia, recuerda cuidar tu salud y de los que te rodean.',
+            comunicate: 'Para mayor comunicación sobre productos, disponibilidad y pedidos comunícate con nosotros <strong>55 8804 5455</strong>'
+        }
+    ]
+
+    artesaniasDataPage = [
+        {
+            title: 'Artesanias Mexicanas',
+            subtitle: '<strong>Apoyo para artesanos Mexicanos</strong>',
+            descripcion: 'Estas auténticas obras de arte, figuras de bronce realizadas por nuestros maestros artesanos siguiendo técnicas fieles a la tradición',
+            comunicate: 'Para mayor comunicación sobre productos, disponibilidad y pedidos comunícate con nosotros <strong>55 8804 5455</strong>'
+        }
+    ]
+
+    lineaBlancaDataPage = [
+        {
+            title: 'Linea Blanca',
+            subtitle: 'Tenemos lo que buscas...',
+            descripcion: 'Electrodomésticos de la mejor calidad, las mejores marcas',
+            comunicate: 'Para mayor comunicación sobre productos, disponibilidad y pedidos comunícate con nosotros <strong>55 8804 5455</strong>'
+        }
+    ]
+
+    recauderiaDataPage = [
+        {
+            title: 'Recauderia',
+            subtitle: 'Conoce los productos de nuestra Recauderia...',
+            descripcion: 'Te ofrecemos los productos mas fresco y a mejor precio para tu hogar',
+            comunicate: 'Para mayor comunicación sobre productos, disponibilidad y pedidos comunícate con nosotros <strong>55 8804 5455</strong>'
+        }
+    ]
+//-Fin de datos para las paginas de productos
