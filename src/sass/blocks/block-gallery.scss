@@ -22,7 +22,7 @@
             font-family: config.$menu-font;
 
             &__title {
-                padding: 80px 5px 0px 5px;
+                padding: 60px 5px 0px 5px;
 
                 font-family: config.$title-font;
                 font-size: 35px;
@@ -37,7 +37,7 @@
                     margin: 20px auto;
                     border: 0px;
                     height: 3px;
-                    background-color: config.$Principal-color__orange;
+                    background-color: config.$Principal-color__blue;
                 }
             }
 
@@ -50,7 +50,7 @@
 
                 margin: 10px auto;
                 border: 3px solid $color;
-                border-bottom: 3px solid config.$Principal-color__orange;
+                border-bottom: 3px solid config.$Principal-color__blue;
                 border-radius: 5px;
 
                 a {
@@ -84,11 +84,13 @@
                     border-radius: 50%;
                     overflow: hidden;
                     margin: 15px auto 0 auto;
+                    background-color: white;
 
                     img {
                         display: block;
                         margin: 3px 19px;
                         height: 90%;
+                        background-color: white;
                     }
                 }
             }

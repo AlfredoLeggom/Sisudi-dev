@@ -16,7 +16,7 @@
 
             font-family: config.$title-font;
 
-            h2{
+            h1{
                 text-align: center;
                 font-size: 50px;
                 margin: 0px;
@@ -28,7 +28,7 @@
                 width: 70px;
                 border: 0px;
                 height: 3px;
-                background: config.$Principal-color__orange;
+                background: config.$Principal-color__blue;
                 margin: 0px auto;
             }
         }

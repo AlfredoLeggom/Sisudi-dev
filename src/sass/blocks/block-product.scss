@@ -56,7 +56,7 @@
             hr {
                 width: 70px;
                 border: 0px;
-                background-color: config.$Principal-color__orange;
+                background-color: config.$Principal-color__blue;
                 height: 3px;
                 margin: 0px auto;
                 margin-top: 15px;
@@ -71,7 +71,7 @@
                 font-size: 17px;
 
                 a {
-                    color: config.$Principal-color__orange;
+                    color: config.$Principal-color__blue;
                 }
             }
         }
@@ -145,7 +145,7 @@
 
     //Inicio de estilos dinamicos
     .ct_item-activate {
-        background-color: config.$Principal-color__orange !important;
+        background-color: config.$Principal-color__blue !important;
     }
     //Fin de estilos dinamicos
 

@@ -43,10 +43,10 @@
     position: relative;
     height: auto;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.07)),
         config.$url_cover-page;
     position: relative;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: 63% center;
 
@@ -235,6 +235,13 @@
 //Inicio de formulario
 @include form.block-form;
 //Fin de formulario
+
+//Estilos Particulares de formulario
+.contact {
+    padding: 45px 0px !important;
+
+    }
+//Fin de Estilos Particulares de formulario
 
 //Inicio de fotter
 @include footer.block-footer;

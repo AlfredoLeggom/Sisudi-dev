@@ -1,0 +1,31 @@
+extends ../templates/template
+
+block config
+    -actual_page = "consumibles"
+
+    //-Importación de bloques
+    include ../blocks/block-menu
+    include ../blocks/block-product-consumibles
+    //-include ../blocks/block-moda
+    include ../blocks/block-footer
+    //-Importar configuraciones extras
+    include ../config/config-product
+    include ../config/json/json-consumibles
+
+block append description 
+    meta(name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
+
+block header
+    //Inicio de menu
+    +block-menu(Categories, SubCategories, CategoriesIcon, url_mainLogo)
+    //Fin de menu
+    
+block container
+    //Inicio de insumos
+    +block-product-consumibles(consumiblesProductData, consumiblesDataPage)
+    //Fin de insumos
+
+block footer
+    //Inicio de Footer
+    +block-footer(title_page, categorias, subCategorias, nameCategorias, nameSubCategorias)
+    //Fin de Footer

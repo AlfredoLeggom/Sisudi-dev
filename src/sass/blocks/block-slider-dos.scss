@@ -27,7 +27,7 @@
                 width: 70px;
                 height: 3px;
                 border: 0px;
-                background-color: config.$Principal-color__orange;
+                background-color: config.$Principal-color__blue;
             }
         }
 
@@ -75,18 +75,18 @@
 
             //evento hover
             .content-slider__rigth--client:hover i {
-                color: config.$Principal-color__orange;
+                color: config.$Principal-color__blue;
             }
 
             .content-slider__left--client:hover i {
-                color: config.$Principal-color__orange;
+                color: config.$Principal-color__blue;
             }
 
             .client-slider__pagination {
                 margin-top: 20px;
 
                 .active {
-                    background-color: config.$Principal-color__orange;
+                    background-color: config.$Principal-color__blue;
                 }
             }
         }

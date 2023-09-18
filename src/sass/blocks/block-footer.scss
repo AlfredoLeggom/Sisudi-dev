@@ -36,7 +36,7 @@
 
         &__menu {
             float: right;
-            width: 50%;
+            width: 40%;
 
             // Menu
             .footer-menu {
@@ -102,7 +102,7 @@
 
     //Efectos de hover
     .footer-menu__category a:hover{
-        color: config.$Principal-color__orange;
+        color: config.$Principal-color__blue;
     }
 
     .footer-menu__category--submenu:hover .footer-submenu{

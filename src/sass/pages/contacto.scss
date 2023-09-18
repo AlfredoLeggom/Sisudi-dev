@@ -30,5 +30,10 @@
 
 //Estilos particulares
 .contact {
-    padding: 60px 0 !important;
+    padding: 60px 0px !important;
+
+    &__title{
+        padding-top: 30px;
+    }
 }
+

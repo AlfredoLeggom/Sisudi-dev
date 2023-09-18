@@ -11,7 +11,7 @@
         font-family: config.$symbol-font !important;
         font-size: 15px;
         margin-right: 5px;
-        color: config.$Principal-color__orange;
+        color: config.$Principal-color__blue;
     }
 
     .contact {
@@ -31,7 +31,7 @@
                 margin: 20px auto;
                 border: 0px;
                 height: 3px;
-                background-color: config.$Principal-color__orange;
+                background-color: config.$Principal-color__blue;
             }
         }
 
@@ -66,7 +66,7 @@
                 border: 1px solid #ccc;
                 border-radius: 5px;
                 box-shadow: 0px 0px 2px #ccc;
-                background-color: config.$Principal-color__orange;
+                background-color: config.$Principal-color__blue;
                 color: white;
                 text-transform: uppercase;
                 cursor: pointer;
@@ -98,7 +98,7 @@
 
                 p{
                     margin-top: 15px;
-                    color: config.$Principal-color__orange;
+                    color: config.$Principal-color__blue;
 
                     .fas{
                         font-size: 17px;
@@ -107,7 +107,7 @@
                         font-size: 22px;
                     }
 
-                    &:last-child {
+                    /*&:last-child {
                         position: absolute;
 
                         top: 80%;
@@ -120,7 +120,7 @@
                                 font-size: 35px;
                             }
                         }
-                    }
+                    }*/
                 }                
             }
 
