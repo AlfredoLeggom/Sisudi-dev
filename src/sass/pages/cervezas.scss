@@ -50,11 +50,15 @@
 //Inicio de estilos particulares
 .wrap-product .product__container {
     .product-box--img {
-        background-color: white;
+        background-color: #18182A;
         flex-basis: 50%;
         align-items: flex-start;
         flex-grow: 0;
         max-height: 300px;
+    }
+
+    img{
+        width: 100%;
     }
 
     .product-box--data {
