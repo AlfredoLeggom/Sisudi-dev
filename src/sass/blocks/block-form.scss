@@ -44,8 +44,10 @@
 
             input,
             button {
-                flex-basis: 0px;
-                flex-grow: 1;
+                flex-basis: 10%;
+                flex-grow: 0;
+                align-items: center;
+                justify-content: center;
 
                 margin: 10px;
                 padding: 10px;

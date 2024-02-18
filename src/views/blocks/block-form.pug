@@ -5,7 +5,8 @@ mixin block-form (direction, phone, time, mail, facebook )
         form(action="#" onsubmit="return false" method="post").contact__form
             input(type="text" placeholder="Nombre" name="Nombre") 
             input(type="tel" placeholder="Teléfono" name="Telefono") 
-            input(type="mail" placeholder="Dirección de correo electrónico" name="Telefono")
+            input(type="mail" placeholder="Dirección de correo electrónico" name="Correo")
+            input(type="text" placeholder="Producto a Cotizar" name="Cotizar")
             button Enviar
         div.contact__info
             div.data 
