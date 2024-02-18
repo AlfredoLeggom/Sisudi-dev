@@ -1,0 +1,31 @@
+extends ../templates/template
+
+block config
+    -actual_page = "alimentos_frescos"
+
+    //-Importación de bloques
+    include ../blocks/block-menu
+    include ../blocks/block-product-alimentos_frescos
+    //-include ../blocks/block-moda
+    include ../blocks/block-footer
+    //-Importar configuraciones extras
+    include ../config/config-product
+    include ../config/json/json-alimentos_frescos
+
+block append description 
+    meta(name="description" content="Proservip te ofrece la mejor opción en alimentos frescos")
+
+block header
+    //Inicio de menu
+    +block-menu(Categories, SubCategories, CategoriesIcon, url_mainLogo)
+    //Fin de menu
+    
+block container
+    //Inicio de cervezas
+    +block-product-alimentos_frescos(alimentos_frescosProductData, alimentos_frescosDataPage)
+    //Fin de cervezas
+
+block footer
+    //Inicio de Footer
+    +block-footer(title_page, categorias, subCategorias, nameCategorias, nameSubCategorias)
+    //Fin de Footer

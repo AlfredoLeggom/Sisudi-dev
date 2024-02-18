@@ -1,0 +1,23 @@
+mixin block-product-articulos_promocionales(productData, pageData)
+    section.wrap-product 
+        div.product__data
+            each data in pageData
+                h2!= data.title 
+                hr
+                h3!= data.subtitle
+                span
+                    p!= data.descripcion
+                    p!= data.comunicate
+                    p 
+                        a(href="" target="_blank") 
+
+        div.product__container
+            each product in productData 
+                div.product-box
+                    div.product-box--img
+                        img(src= product.imglink)
+                    div.product-box--data
+                        span
+                            p
+
+                             
